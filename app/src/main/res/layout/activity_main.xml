@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Champ pour ajouter un numéro de téléphone -->
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entrez un numéro de téléphone"
+            android:inputType="phone"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Bouton pour ajouter un contact -->
+        <Button
+            android:id="@+id/btn_add_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajouter Contact"
+            android:layout_gravity="end"
+             />
+
+        <!-- Liste des contacts ajoutés -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Champ pour personnaliser le message -->
+        <EditText
+            android:id="@+id/et_custom_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Message personnalisé (optionnel)"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:minLines="3"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Bouton principal pour envoyer le SMS -->
+        <Button
+            android:id="@+id/btn_send_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Envoyer le message d'urgence"
+            android:backgroundTint="#FF0000"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
